@@ -11,8 +11,23 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Dumping database structure for employee
-CREATE DATABASE IF NOT EXISTS `miniadmin` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `miniadmin`;
+CREATE DATABASE IF NOT EXISTS `employee` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `employee`;
+
+
+-- Dumping structure for table employee.ma_articles
+CREATE TABLE IF NOT EXISTS `ma_articles` (
+  `idarticles` int(11) NOT NULL AUTO_INCREMENT,
+  `title` text NOT NULL,
+  `content` text NOT NULL,
+  `date` date NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`idarticles`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- Dumping data for table employee.ma_articles: 0 rows
+/*!40000 ALTER TABLE `ma_articles` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ma_articles` ENABLE KEYS */;
 
 
 -- Dumping structure for table employee.ma_category
@@ -20,12 +35,10 @@ CREATE TABLE IF NOT EXISTS `ma_category` (
   `idcategory` int(11) NOT NULL AUTO_INCREMENT,
   `category_name` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`idcategory`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- Dumping data for table employee.ma_category: 0 rows
 /*!40000 ALTER TABLE `ma_category` DISABLE KEYS */;
-REPLACE INTO `ma_category` (`idcategory`, `category_name`) VALUES
-	(2, 'Category 1');
 /*!40000 ALTER TABLE `ma_category` ENABLE KEYS */;
 
 
@@ -54,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `ma_user` (
   PRIMARY KEY (`iduser`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Dumping data for table employee.ma_user: 1 rows
+-- Dumping data for table employee.ma_user: 2 rows
 /*!40000 ALTER TABLE `ma_user` DISABLE KEYS */;
 REPLACE INTO `ma_user` (`iduser`, `username`, `password`, `status`) VALUES
 	(1, 'admin', 'admin', 'admin'),

@@ -20,7 +20,7 @@
                 <div class="col-md-3"><?php $this->load->view('global/sidebar'); ?></div>
                 <div class="col-md-9">
                     <div class="main-content">
-                    <?php $this->load->view('post_content'); ?>
+                    <?php $this->load->view('articles/articles_content'); ?>
                     </div>
                 </div>
             </div>

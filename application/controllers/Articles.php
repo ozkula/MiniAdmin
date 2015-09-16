@@ -2,7 +2,7 @@
 /**
 * 
 */
-class Post extends CI_controller
+class Articles extends CI_controller
 {
 	
 	function __construct()
@@ -15,13 +15,12 @@ class Post extends CI_controller
 		$data['user_id'] = $session_data[0]['iduser'];
 		$data['username'] = $session_data[0]['username'];
 		$data['status'] = $session_data[0]['status'];
-		$data['show_category'] = $this->Mrun->Show_Category_data();
-		$data['show_post_data'] = $this->Mrun->Show_Post_data();
-		$this->load->view('post/post',$data);
+		$data['show_post_data'] = $this->Mrun->Show_Articles_data();
+		$this->load->view('articles/articles',$data);
 	}
 	function add_new(){
-		$this->Mcreate->add_post();
-		redirect('post','refresh');
+		$this->Mcreate->add_articles();
+		redirect('articles','refresh');
 	}
 	function edit(){
 		$session_data = $this->session->userdata('login');
@@ -31,18 +30,17 @@ class Post extends CI_controller
 		$data['status'] = $session_data[0]['status'];
 		// This for web
 		$idpost = $this->uri->segment(3); // change number to your number <-see uri segment CI
-		$data['show_category'] = $this->Mrun->Show_Category_data();
-		$data['show_post_data'] = $this->Mrun->Show_Post_data_byId($idpost);
-		$this->load->view('post/edit_post',$data);
+		$data['show_post_data'] = $this->Mrun->Show_articles_data_byId($idpost);
+		$this->load->view('articles/edit_articles',$data);
 	}
 	function edit_true(){
-		$this->Mupdate->edit_post();
-		redirect('post','refresh');
+		$this->Mupdate->edit_articles();
+		redirect('articles','refresh');
 	}
 	function delete(){
 		$idpost = $this->uri->segment(3);
-		$this->Mdelete->delete_post($idpost);
-		redirect('post','refresh');
+		$this->Mdelete->delete_articles($idpost);
+		redirect('articles','refresh');
 	}
 }
 ?>
