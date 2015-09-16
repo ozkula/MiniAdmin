@@ -12,7 +12,7 @@ class Post extends CI_controller
 	function index(){
 		$session_data = $this->session->userdata('login');
 		$data['user_login'] = $session_data;
-		$data['user_id'] = $session_data[0]['user_id'];
+		$data['user_id'] = $session_data[0]['iduser'];
 		$data['username'] = $session_data[0]['username'];
 		$data['status'] = $session_data[0]['status'];
 		$data['show_category'] = $this->Mrun->Show_Category_data();
@@ -26,7 +26,7 @@ class Post extends CI_controller
 	function edit(){
 		$session_data = $this->session->userdata('login');
 		$data['user_login'] = $session_data;
-		$data['user_id'] = $session_data[0]['user_id'];
+		$data['user_id'] = $session_data[0]['iduser'];
 		$data['username'] = $session_data[0]['username'];
 		$data['status'] = $session_data[0]['status'];
 		// This for web

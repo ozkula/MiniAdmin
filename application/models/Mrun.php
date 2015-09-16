@@ -12,23 +12,23 @@ class Mrun extends CI_Model
     }
 	function Show_Post_data(){
 		$query = "SELECT * FROM ma_post as post
-					LEFT JOIN ma_category as category ON category.category_id = post.idcategory 
-					LEFT JOIN ma_user as user ON user.user_id = post.iduser
-					ORDER BY post_id DESC";
+					LEFT JOIN ma_category as category ON category.idcategory = post.category_id 
+					LEFT JOIN ma_user as user ON user.iduser = post.user_id
+					ORDER BY idpost DESC";
 		$result = $this->db->query($query);
 		return $result->result_array();
 	}
 	function Show_Post_data_byId($id){
 		$query = "SELECT * FROM ma_post as post
-					LEFT JOIN ma_category as category ON category.category_id = post.idcategory 
-					LEFT JOIN ma_user as user ON user.user_id = post.iduser
-					WHERE post_id = ?";
+					LEFT JOIN ma_category as category ON category.idcategory = post.category_id 
+					LEFT JOIN ma_user as user ON user.iduser = post.user_id
+					WHERE idpost = ?";
 		$parameter = array($id);					
 		$result = $this->db->query($query,$parameter);
 		return $result->result_array();
 	}
 	function Show_Category_data(){
-		$query = "SELECT * FROM ma_category ORDER BY category_id DESC";
+		$query = "SELECT * FROM ma_category ORDER BY idcategory DESC";
 		$result = $this->db->query($query);
 		return $result->result_array();	
 	}

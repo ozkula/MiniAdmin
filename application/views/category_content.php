@@ -36,7 +36,7 @@
 		  			<td><?php echo $no ?></td>
 				  	<td><?php echo $show_category[$i]['category_name']; ?></td>
 				  	<td>
-				  	 <a href="<?php echo site_url("category/delete/". $show_category[$i]["category_id"]); ?>" class="btn btn-default btn-sm glyphicon glyphicon-trash" role="button"></a>
+				  	 <a href="<?php echo site_url("category/delete/". $show_category[$i]["idcategory"]); ?>" class="btn btn-default btn-sm glyphicon glyphicon-trash" role="button"></a>
 				  	</td>
 			  	</tr>
 		  	<?php $no++;} ?>

@@ -23,7 +23,7 @@
 						  <label>Select Category</label>
 						  <select class="form-control" name="category">
 							  <?php for ($i=0; $i <count($show_category) ; $i++) { ?>
-							  	<option value="<?php echo $show_category[$i]['category_id']; ?>"><?php echo $show_category[$i]['category_name']; ?></option>
+							  	<option value="<?php echo $show_category[$i]['idcategory']; ?>"><?php echo $show_category[$i]['category_name']; ?></option>
 							  <?php } ?>
 						  </select>
 						</div>
@@ -55,8 +55,8 @@
 				  	<td><?php echo $show_post_data[$i]['category_name']; ?></td>
 				  	<td><?php echo $show_post_data[$i]['username']; ?></td>
 				  	<td>
-				  		<a href="<?php echo site_url("post/edit/". $show_post_data[$i]["post_id"]); ?>" class="btn btn-default btn-sm glyphicon glyphicon-pencil" role="button"></a>
-				  		<a href="<?php echo site_url("post/delete/". $show_post_data[$i]["post_id"]); ?>" class="btn btn-default btn-sm glyphicon glyphicon-trash" role="button"></a>
+				  		<a href="<?php echo site_url("post/edit/". $show_post_data[$i]["idpost"]); ?>" class="btn btn-default btn-sm glyphicon glyphicon-pencil" role="button"></a>
+				  		<a href="<?php echo site_url("post/delete/". $show_post_data[$i]["idpost"]); ?>" class="btn btn-default btn-sm glyphicon glyphicon-trash" role="button"></a>
 				  	</td>
 			  	</tr>
 		  	<?php $no++;} ?>

@@ -10,8 +10,8 @@ class mCreate extends CI_Model
 			'title' => $this->input->post('title'),
 			'content' => $this->input->post('content'),
 			'date' => $datenow,
-			'idcategory' => $this->input->post('category'),
-			'iduser' => $this->input->post('user_id')
+			'category_id' => $this->input->post('category'),
+			'user_id' => $this->input->post('user_id')
 			);
 		$this->db->insert('ma_post',$data);
 	}	
