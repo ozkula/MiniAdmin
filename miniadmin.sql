@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `ma_articles` (
   `date` date NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`idarticles`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table employee.ma_articles: 0 rows
 /*!40000 ALTER TABLE `ma_articles` DISABLE KEYS */;
@@ -35,11 +35,26 @@ CREATE TABLE IF NOT EXISTS `ma_category` (
   `idcategory` int(11) NOT NULL AUTO_INCREMENT,
   `category_name` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`idcategory`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table employee.ma_category: 0 rows
 /*!40000 ALTER TABLE `ma_category` DISABLE KEYS */;
 /*!40000 ALTER TABLE `ma_category` ENABLE KEYS */;
+
+
+-- Dumping structure for table employee.ma_page
+CREATE TABLE IF NOT EXISTS `ma_page` (
+  `idpage` int(11) NOT NULL AUTO_INCREMENT,
+  `title` text NOT NULL,
+  `content` text NOT NULL,
+  `date` date NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`idpage`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table employee.ma_page: 0 rows
+/*!40000 ALTER TABLE `ma_page` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ma_page` ENABLE KEYS */;
 
 
 -- Dumping structure for table employee.ma_post
@@ -51,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `ma_post` (
   `category_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`idpost`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table employee.ma_post: 0 rows
 /*!40000 ALTER TABLE `ma_post` DISABLE KEYS */;
