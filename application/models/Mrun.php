@@ -43,7 +43,24 @@ class Mrun extends CI_Model
 		$parameter = array($id);					
 		$result = $this->db->query($query,$parameter);
 		return $result->result_array();
+	} 
+	// Page
+	function Show_page_data(){
+		$query = "SELECT * FROM ma_page as page
+					LEFT JOIN ma_user as user ON user.iduser = page.user_id
+					ORDER BY idpage DESC";
+		$result = $this->db->query($query);
+		return $result->result_array();
 	}
+	function Show_page_data_byId($id){
+		$query = "SELECT * FROM ma_page as page
+					LEFT JOIN ma_user as user ON user.iduser = page.user_id
+					WHERE idpage = ?";
+		$parameter = array($id);					
+		$result = $this->db->query($query,$parameter);
+		return $result->result_array();
+	} 
+	// Category
 	function Show_Category_data(){
 		$query = "SELECT * FROM ma_category ORDER BY idcategory DESC";
 		$result = $this->db->query($query);

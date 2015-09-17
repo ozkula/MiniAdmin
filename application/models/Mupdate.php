@@ -27,6 +27,17 @@ class mUpdate extends CI_Model
 		$this->db->where('idarticles', $this->input->post('articles_id'));
 		$this->db->update('ma_articles', $data);
 	}
+	function edit_page(){
+		$datenow = date('Y-m-d');
+		$data = array(
+			'title' => $this->input->post('title'),
+			'content' => $this->input->post('content'),
+			'date' => $datenow,
+			'user_id' => $this->input->post('user_id')
+			);
+		$this->db->where('idpage', $this->input->post('page_id'));
+		$this->db->update('ma_page', $data);
+	}
 	function edit_metakey(){
 		$data = array(
 			'val1' => $this->input->post('keyword'),

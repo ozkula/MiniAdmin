@@ -9,6 +9,7 @@
 			<h4 class="text-right"><?php echo $status; ?></h4></a></li>
 		<li><a href="<?php echo base_url(); ?>dashboard">Dashboard</a></li>
 		<li><a href="<?php echo base_url(); ?>post">Posts</a></li>
+		<li><a href="<?php echo base_url(); ?>page">Page</a></li>
 		<li><a href="<?php echo base_url(); ?>articles">Articles</a></li>
 		<li><a href="<?php echo base_url(); ?>category">Categories</a></li>
 		<?php  if ($status != 'user') { ?>
