@@ -49,6 +49,17 @@ class Mrun extends CI_Model
 		$result = $this->db->query($query);
 		return $result->result_array();	
 	}
+	// Setting
+	function get_metakey(){
+		$query = "SELECT * FROM ma_setting WHERE idsetting = 1";
+		$result = $this->db->query($query);
+		return $result->result_array();		
+	}
+	function get_titledesc(){
+		$query = "SELECT * FROM ma_setting WHERE idsetting = 2";
+		$result = $this->db->query($query);
+		return $result->result_array();			
+	}
 	
 }
 ?>

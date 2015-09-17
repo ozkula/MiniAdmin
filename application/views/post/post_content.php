@@ -7,7 +7,7 @@
 	<br>
 	<div class="collapse" id="inputCollapse">
 	  <div class="well">
-	    	<div class="cointainer">
+	    	<div class="container">
 	    			<form role="form" action="<?php echo base_url(); ?>post/add_new" method="post">
 	    			<input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
 		    			<div class="input-group">
@@ -27,7 +27,9 @@
 							  <?php } ?>
 						  </select>
 						</div>
-						<button type="submit" class="btn btn-info btn-sm">Save</button>
+						<div class="form-group">
+							<button type="submit" class="btn btn-info btn-sm">Save</button>
+						</div>
 					</form>	    		
 	    	</div>
 	  </div>

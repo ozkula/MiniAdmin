@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-body">
-	<!--  -->
+	<div class="container">
 	<h4>Edit Posting</h4>
     <!-- Content Data -->
 		<form role="form" action="<?php echo base_url(); ?>post/edit_true" method="post">
@@ -26,5 +26,6 @@
 						<button type="submit" class="btn btn-info btn-sm">Save</button>
 					</form>	    		
 	<!--  -->
+	</div>
   </div>
 </div>

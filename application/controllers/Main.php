@@ -4,12 +4,6 @@
 */
 class Main extends CI_controller
 {
-	
-	function __construct()
-	{
-		parent::__construct();
-	}
-
 	function index(){		
 		$session_data = $this->session->userdata('login');
 		$data['user_login'] = $session_data;

@@ -1,5 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-body">
+  <div class="container">
 	<!--  -->
 	<h4>Edit Articles</h4>
     <!-- Content Data -->
@@ -18,5 +19,6 @@
 						<button type="submit" class="btn btn-info btn-sm">Save</button>
 					</form>	    		
 	<!--  -->
+	</div>
   </div>
 </div>

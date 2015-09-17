@@ -58,6 +58,23 @@ CREATE TABLE IF NOT EXISTS `ma_post` (
 /*!40000 ALTER TABLE `ma_post` ENABLE KEYS */;
 
 
+-- Dumping structure for table employee.ma_setting
+CREATE TABLE IF NOT EXISTS `ma_setting` (
+  `idsetting` int(11) NOT NULL AUTO_INCREMENT,
+  `setting_name` text,
+  `val1` text,
+  `val2` text,
+  PRIMARY KEY (`idsetting`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table employee.ma_setting: 2 rows
+/*!40000 ALTER TABLE `ma_setting` DISABLE KEYS */;
+REPLACE INTO `ma_setting` (`idsetting`, `setting_name`, `val1`, `val2`) VALUES
+	(1, 'Keyword', '', ''),
+	(2, 'Title Description', '', '');
+/*!40000 ALTER TABLE `ma_setting` ENABLE KEYS */;
+
+
 -- Dumping structure for table employee.ma_user
 CREATE TABLE IF NOT EXISTS `ma_user` (
   `iduser` int(11) NOT NULL AUTO_INCREMENT,

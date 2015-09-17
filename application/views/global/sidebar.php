@@ -12,7 +12,7 @@
 		<li><a href="<?php echo base_url(); ?>articles">Articles</a></li>
 		<li><a href="<?php echo base_url(); ?>category">Categories</a></li>
 		<?php  if ($status != 'user') { ?>
-			 <li><a href="#">Setting</a></li>
+			 <li><a href="<?php echo base_url(); ?>setting">Setting</a></li>
 		<?php  } ?>
 		<li><a href="<?php echo base_url(); ?>logout">Logout</a></li>
 	</ul>
